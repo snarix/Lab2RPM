@@ -1,0 +1,57 @@
+﻿<Window x:Class="Pr17Varlamov.Add"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pr17Varlamov"
+        mc:Ignorable="d"
+        Title="Add" Height="590" Width="400">
+    <Grid>
+        <GroupBox>
+            <Grid>
+                <Label Content="Артикул" 
+                       Margin="10,10,280,526"/>
+                <TextBox Margin="10,41,244,488"
+                         x:Name="articul"/>
+
+                <Label Content="Наименование обуви" 
+                       Margin="10,79,194,453"/>
+                <TextBox Margin="10,114,244,420"
+                         x:Name="naimObuv"/>
+
+                <Label Content="Кол-во пар"
+                       Margin="10,152,290,385"/>
+                <TextBox Margin="10,182,244,347"
+                         x:Name="kolPar"/>
+
+                <Label Content="Стоимость одной пары"
+                       Margin="10,220,194,314"/>
+                <TextBox Margin="10,253,244,281"
+                         x:Name="stoimOnePara"/>
+
+                <Label Content="Размер в наличии"
+                       Margin="10,286,244,251"/>
+                <TextBox Margin="10,316,244,218"
+                         Name="razmerNalich"/>
+
+                <Label Content="Имя Фабрики" 
+                       Margin="10,349,244,188"/>
+                <TextBox Margin="10,379,244,155"
+                         x:Name="nameFabrika"/>
+
+                <Label Content="Срок поставки"
+                       Margin="10,412,244,92"/>
+                <DatePicker Margin="10,444,244,90"
+                            x:Name="srok"/>
+
+                <Button Margin="10,482,244,37"
+                        Content="Добавить"
+                        Click="Add_Btn"/>
+                <Button Margin="149,482,105,37"
+                        Content="Отмена"
+                        Click="Cancel_Btn"/>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>
