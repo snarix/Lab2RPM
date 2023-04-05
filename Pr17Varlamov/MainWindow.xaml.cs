@@ -78,12 +78,6 @@ namespace Pr17Varlamov
             }
         }
 
-       
-        private void Exit(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Search(object sender, RoutedEventArgs e)
         {
             for (int i = 0; i < Grid1.Items.Count; i++)
@@ -104,5 +98,25 @@ namespace Pr17Varlamov
                 catch { }
             }
         }
+
+        List<Obuvv> _obuvv;
+        private void Filtr(object sender, RoutedEventArgs e)
+        {
+            _obuvv= db.Obuvv.ToList();
+            var filtered = _obuvv.Where(_obuvv => _obuvv.NaimObuv == Filtrered.Text);
+            Grid1.ItemsSource = filtered;
+        }
+
+        private void AboutProgramm(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Разработчик: Варламов А.А.\nГруппа: ИСП-34.\nЗадание: Сведения об ассортименте обуви в магазине.\n" +
+                "База данных должна содержать следующую информацию: артикул, наименование обуви, количество пар, стоимость одной пары, имеющиеся размеры, название фабрики и срок поставки обуви в магазин");
+        }
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+
     }
 }
